@@ -45,8 +45,15 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
 #enables color for iTerm
 export TERM=xterm-color
 
+#bash git auto completion package - 'brew install bash-completion'
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 #Aliases
 alias ls='ls -G'
 alias ll='ls -hl'
 alias dir='ls'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
